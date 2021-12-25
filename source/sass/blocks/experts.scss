@@ -1,0 +1,26 @@
+.experts {
+  padding-top: 63px;
+  padding-bottom: 93px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -22px;
+    padding: 0;
+    list-style: none;
+
+    @include viewport--sm {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    width: calc(100%/5);
+    min-width: 250px;
+
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
+}

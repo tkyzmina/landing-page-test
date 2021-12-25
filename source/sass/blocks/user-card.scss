@@ -1,0 +1,66 @@
+.user-card {
+  margin: 0 22px;
+  margin-bottom: 20px;
+  padding-top: 18px;
+
+
+  @include viewport--sm {
+    margin: 0 0 40px 0;
+    padding-top: 0;
+    display: flex;
+  }
+
+  &__img {
+    margin-bottom: 24px;
+    border-radius: 30px;
+
+    @include viewport--sm {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+
+    &::after {
+      content: url("../../img/content/users/dots-user.png");
+      position: absolute;
+      position: absolute;
+      top: -18px;
+      right: -2px;
+      z-index: -1;
+
+      @include viewport--sm {
+        display: none;
+      }
+    }
+
+    @include viewport--sm {
+      margin-right: 20px;
+      width: 30%;
+      min-width: 120px;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+    font-style: normal;
+    color: $color-nero;
+  }
+
+  &__position {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: $color-nobel;
+  }
+}
