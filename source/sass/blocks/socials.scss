@@ -1,0 +1,33 @@
+.socials {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-right: 85px;
+    padding: 0;
+    list-style: none;
+
+    @include viewport--sm {
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    margin-right: 24px;
+  }
+
+  &__link {
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      fill: $color-nobel;
+      transition: fill $default-transition-settings;
+    }
+
+    &:hover>svg {
+      fill: $color-sherpa-blue;
+    }
+  }
+}
