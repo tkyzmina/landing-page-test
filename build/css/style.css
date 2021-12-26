@@ -1137,7 +1137,7 @@ button,
   .user-card__img-wrapper {
     position: relative; }
     .user-card__img-wrapper::after {
-      content: url("../../img/content/users/dots-user.png");
+      content: url("../img/content/users/dots-user.png");
       position: absolute;
       top: -18px;
       right: -2px;
