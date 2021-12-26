@@ -561,6 +561,9 @@ button,
       display: block;
       width: 100%;
       height: auto; }
+      @media (max-width: 767px) {
+        .header__logo svg {
+          width: 150px; } }
   .header__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -607,7 +610,7 @@ button,
     padding: 0;
     font-size: 28px;
     line-height: 36px;
-    color: #93EA20;
+    color: #93ea20;
     text-transform: uppercase;
     -webkit-transform: translateY(-4rem) scale(0.8);
             transform: translateY(-4rem) scale(0.8);
@@ -650,12 +653,12 @@ button,
     -ms-flex-item-align: end;
         align-self: flex-end;
     margin-bottom: 50px;
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
     -webkit-transform: translateY(-4rem) scale(0.8);
             transform: translateY(-4rem) scale(0.8);
     -webkit-animation: 3s 0.9s opacity both;
             animation: 3s 0.9s opacity both;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
     opacity: 0; }
     @media (max-width: 1439px) {
       .header__img {
@@ -707,52 +710,24 @@ button,
     @media (max-width: 767px) {
       .header__form {
         padding: 20px; } }
-
-@-webkit-keyframes opacity {
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none; } }
-
-@keyframes opacity {
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none; } }
-
-@-webkit-keyframes showRight {
-  from {
-    right: -100%; }
-  to {
-    right: 0;
-    opacity: 1; } }
-
-@keyframes showRight {
-  from {
-    right: -100%; }
-  to {
-    right: 0;
-    opacity: 1; } }
-
-@-webkit-keyframes showUp {
-  0% {
-    opacity: 0; }
-  20% {
-    opacity: 0.3; }
-  80% {
-    opacity: 0.8; }
-  100% {
-    opacity: 1; } }
-
-@keyframes showUp {
-  0% {
-    opacity: 0; }
-  20% {
-    opacity: 0.3; }
-  80% {
-    opacity: 0.8; }
-  100% {
-    opacity: 1; } }
+  .header .decor {
+    position: absolute;
+    z-index: 5; }
+    @media (max-width: 1023px) {
+      .header .decor {
+        display: none; } }
+    .header .decor--left {
+      left: -65px;
+      top: 314px; }
+      @media (max-width: 1439px) {
+        .header .decor--left {
+          left: -130px; } }
+    .header .decor--right {
+      right: -411px;
+      top: 6px; }
+      @media (max-width: 1439px) {
+        .header .decor--right {
+          right: -200px; } }
 
 .footer {
   min-height: 96px;
@@ -905,13 +880,13 @@ button,
     @media (max-width: 767px) {
       .modal__content {
         width: 100%;
-        padding-bottom: 50%; } }
+        padding-bottom: 56.25%; } }
   .modal__close-btn {
     position: absolute;
     top: 3px;
     right: -30px; }
     .modal__close-btn svg {
-      fill: #00B336; }
+      fill: #00b336; }
   .modal--responsive .modal__content {
     width: 100%; }
   .modal--fit-content .modal__content {
@@ -985,15 +960,15 @@ button,
     cursor: default;
     pointer-events: none; }
   .btn--primary {
-    color: #005F4B;
-    background-color: #93EA20; }
+    color: #005f4b;
+    background-color: #93ea20; }
     .btn--primary:hover, .btn--primary:focus {
-      background-color: #A7FF34; }
+      background-color: #a7ff34; }
     .btn--primary:active {
       background-color: #7ece13; }
   .btn--secondary {
     color: #ffffff;
-    background-color: #00B336; }
+    background-color: #00b336; }
     .btn--secondary:hover, .btn--secondary:focus {
       background-color: #00dc42; }
     .btn--secondary:active {
@@ -1085,7 +1060,7 @@ button,
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
     .register-form__checkbox input:checked ~ label::after {
-      border-color: #00B336; }
+      border-color: #00b336; }
     .register-form__checkbox input:checked ~ label::before {
       background-color: #f2f2f2; }
   .register-form__policy {
@@ -1094,7 +1069,7 @@ button,
     padding: 0;
     color: #ffffff; }
   .register-form__link {
-    color: #93EA20; }
+    color: #93ea20; }
     .register-form__link:hover {
       text-decoration: underline; }
   .register-form .btn {
@@ -1163,7 +1138,6 @@ button,
     position: relative; }
     .user-card__img-wrapper::after {
       content: url("../../img/content/users/dots-user.png");
-      position: absolute;
       position: absolute;
       top: -18px;
       right: -2px;
@@ -1343,6 +1317,52 @@ button,
     @media (max-width: 767px) {
       .promo__moto {
         margin-right: 0; } }
+
+@-webkit-keyframes opacity {
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes opacity {
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes showRight {
+  from {
+    right: -100%; }
+  to {
+    right: 0;
+    opacity: 1; } }
+
+@keyframes showRight {
+  from {
+    right: -100%; }
+  to {
+    right: 0;
+    opacity: 1; } }
+
+@-webkit-keyframes showUp {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0.3; }
+  80% {
+    opacity: 0.8; }
+  100% {
+    opacity: 1; } }
+
+@keyframes showUp {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0.3; }
+  80% {
+    opacity: 0.8; }
+  100% {
+    opacity: 1; } }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
