@@ -1,8 +1,9 @@
-import {disableScrolling, enableScrolling} from './scroll-lock';
+import { disableScrolling, enableScrolling } from "./scroll-lock";
 
 const openModal = (modal, callback, preventScrollLock) => {
-  modal.classList.add('modal--active');
-
+  modal.classList.add("modal--active");
+  document.getElementById("my_video").src =
+    "https://www.youtube.com/embed/QFx6ScEP28I";
   if (callback) {
     callback();
   }
@@ -13,7 +14,8 @@ const openModal = (modal, callback, preventScrollLock) => {
 };
 
 const closeModal = (modal, callback, preventScrollLock) => {
-  modal.classList.remove('modal--active');
+  modal.classList.remove("modal--active");
+  document.getElementById("my_video").src = "";
 
   if (callback) {
     callback();
@@ -25,36 +27,42 @@ const closeModal = (modal, callback, preventScrollLock) => {
 };
 
 const onEscPress = (evt, modal, callback) => {
-  const isEscKey = evt.key === 'Escape' || evt.key === 'Esc';
+  const isEscKey = evt.key === "Escape" || evt.key === "Esc";
 
-  if (isEscKey && modal.classList.contains('modal--active')) {
+  if (isEscKey && modal.classList.contains("modal--active")) {
     evt.preventDefault();
     closeModal(modal, callback);
   }
 };
 
 const setModalListeners = (modal, closeCallback, preventScrollLock) => {
-  const overlay = modal.querySelector('.modal__overlay');
-  const closeBtn = modal.querySelector('.modal__close-btn');
+  const overlay = modal.querySelector(".modal__overlay");
+  const closeBtn = modal.querySelector(".modal__close-btn");
 
-  closeBtn.addEventListener('click', () => {
+  closeBtn.addEventListener("click", () => {
     closeModal(modal, closeCallback, preventScrollLock);
   });
 
-  overlay.addEventListener('click', () => {
+  overlay.addEventListener("click", () => {
     closeModal(modal, closeCallback, preventScrollLock);
   });
 
-  document.addEventListener('keydown', (evt) => {
+  document.addEventListener("keydown", (evt) => {
     onEscPress(evt, modal, closeCallback, preventScrollLock);
   });
 };
 
-const setupModal = (modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock) => {
+const setupModal = (
+  modal,
+  closeCallback,
+  modalBtns,
+  openCallback,
+  noPrevDefault,
+  preventScrollLock
+) => {
   if (modalBtns) {
-
     modalBtns.forEach((btn) => {
-      btn.addEventListener('click', (evt) => {
+      btn.addEventListener("click", (evt) => {
         if (!noPrevDefault) {
           evt.preventDefault();
         }
@@ -66,4 +74,4 @@ const setupModal = (modal, closeCallback, modalBtns, openCallback, noPrevDefault
   setModalListeners(modal, closeCallback, preventScrollLock);
 };
 
-export {setupModal, openModal, closeModal};
+export { setupModal, openModal, closeModal };
