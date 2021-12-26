@@ -6,8 +6,9 @@
   justify-content: center;
   align-items: center;
   width: auto;
+  height: 48px;
   margin: 0;
-  padding: 12px 24px;
+  padding: 12px 32px;
 
   font-size: 16px;
   line-height: 24px;
@@ -62,6 +63,33 @@
 
     &:active {
       background-color: #008a2a;
+    }
+  }
+
+  &--play {
+    padding: 0;
+    width: 116px;
+    height: 72px;
+    background-color: transparent;
+    border-radius: 10px;
+    line-height: 0;
+
+    &:hover svg,
+    &:focus svg {
+      fill: red;
+      opacity: 1;
+    }
+
+    &:active svg {
+      opacity: 0.5;
+    }
+  }
+
+  &__icon {
+    svg {
+      fill: #93EA20;
+      opacity: 0.7;
+      transition: fill $default-transition-settings, opacity $default-transition-settings;
     }
   }
 }

@@ -789,8 +789,9 @@ button,
       -ms-flex-align: center;
           align-items: center;
   width: auto;
+  height: 48px;
   margin: 0;
-  padding: 12px 24px;
+  padding: 12px 32px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
@@ -831,6 +832,24 @@ button,
       background-color: #00dc42; }
     .btn--secondary:active {
       background-color: #008a2a; }
+  .btn--play {
+    padding: 0;
+    width: 116px;
+    height: 72px;
+    background-color: transparent;
+    border-radius: 10px;
+    line-height: 0; }
+    .btn--play:hover svg,
+    .btn--play:focus svg {
+      fill: red;
+      opacity: 1; }
+    .btn--play:active svg {
+      opacity: 0.5; }
+  .btn__icon svg {
+    fill: #93EA20;
+    opacity: 0.7;
+    -webkit-transition: fill 0.3s ease, opacity 0.3s ease;
+    transition: fill 0.3s ease, opacity 0.3s ease; }
 
 .register-form__title {
   margin-bottom: 16px;
@@ -908,7 +927,7 @@ button,
   .register-form__link:hover {
     text-decoration: underline; }
 
-.section__title {
+.section-title {
   margin: 0;
   margin-bottom: 32px;
   padding: 0;
@@ -916,12 +935,14 @@ button,
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: 48px; }
+  line-height: 48px;
+  text-align: center; }
   @media (max-width: 767px) {
-    .section__title {
+    .section-title {
       font-size: 32px;
-      line-height: 40px; } }
-  .section__title--left {
+      line-height: 40px;
+      text-align: left; } }
+  .section-title--left {
     text-align: left; }
 
 .experts {
@@ -1038,6 +1059,117 @@ button,
 
 .socials__link:hover > svg {
   fill: #004550; }
+
+.promo {
+  margin-bottom: 48px;
+  padding-top: 88px; }
+  .promo__content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .promo__content::after {
+      content: "";
+      position: absolute;
+      bottom: -48px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #cdcdcd; }
+    @media (max-width: 1023px) {
+      .promo__content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+  .promo__preview {
+    width: 30%;
+    min-width: 390px;
+    margin-right: 8.4%; }
+    @media (max-width: 1023px) {
+      .promo__preview {
+        margin-bottom: 40px; } }
+    @media (max-width: 767px) {
+      .promo__preview {
+        width: 100%;
+        min-width: 280px;
+        margin-right: 0;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center; } }
+  .promo__wrapper {
+    position: relative; }
+    .promo__wrapper .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+  .promo__figure {
+    display: block;
+    margin: 0; }
+  .promo__figcaption {
+    margin-top: 21px;
+    font-size: 16px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 700;
+    color: #999999; }
+  .promo__img {
+    border-radius: 10px; }
+    @media (max-width: 767px) {
+      .promo__img {
+        width: 100%;
+        height: auto; } }
+  .promo__title {
+    margin-bottom: 47px; }
+  .promo__text {
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
+    color: #232323; }
+    .promo__text:last-of-type {
+      margin-bottom: 0; }
+  .promo__list {
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
+    list-style: none; }
+  .promo__item {
+    position: relative;
+    margin-bottom: 8px;
+    padding-left: 24px; }
+    .promo__item::before {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #232323;
+      left: 0;
+      top: 9px; }
+  .promo__btn-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 48px; }
+    .promo__btn-wrapper .btn {
+      margin-top: 8px; }
+  .promo__moto {
+    width: 400px;
+    margin-right: 17.2%;
+    font-size: 24px;
+    line-height: 32px;
+    color: #232323; }
+    @media (max-width: 1439px) {
+      .promo__moto {
+        margin-right: 20px;
+        margin-bottom: 30px; } }
+    @media (max-width: 767px) {
+      .promo__moto {
+        margin-right: 0; } }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
