@@ -3,14 +3,84 @@
   background-color: $color-white-smoke;
 
   &__inner {
-    padding: 36px 0;
+    padding-top: 36px;
+    padding-bottom: 36px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    @include viewport--sm {
+    @include viewport--md {
       flex-direction: column;
       justify-content: center;
+    }
+  }
+
+  &__company {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__copyright {
+    margin-left: 5px;
+    display: flex;
+
+    @include viewport--md {
+      margin-left: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      order: 2;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include viewport--md {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-left: 16px;
+
+    & ::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -8px;
+      width: 1px;
+      height: 15px;
+      background-color: $color-nobel;
+    }
+
+    @include viewport--md {
+      &:first-of-type {
+        & ::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+  &__link,
+  &__company {
+    font-style: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color-nobel;
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

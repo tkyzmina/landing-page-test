@@ -1,19 +1,29 @@
 .socials {
+  @include viewport--md {
+    margin-bottom: 20px;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    margin-right: 85px;
+    margin-right: 45px;
     padding: 0;
     list-style: none;
 
-    @include viewport--sm {
+    @include viewport--md {
       margin-right: 0;
     }
   }
 
   &__item {
     margin-right: 24px;
+
+    @include viewport--md {
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
 
   &__link {
@@ -24,6 +34,11 @@
       height: auto;
       fill: $color-nobel;
       transition: fill $default-transition-settings;
+
+      @include viewport--md {
+        width: 35px;
+        height: 35px;
+      }
     }
 
     &:hover>svg {
