@@ -1,7 +1,10 @@
 <div class="user-card">
   <div class="user-card__img-wrapper">
-    <img class="user-card__img" src="@@cardPictSrc" srcset="@@cardPictSrcSet 2x" alt="@@cardPicAlt" width="164"
-      height="164">
+    <picture>
+      <source type="image/webp" srcset="@@cardPicWebp, @@cardPicWebp2x 2x">
+      <img class="user-card__img" src="@@cardPictSrc" srcset="@@cardPictSrcSet 2x" alt="@@cardPicAlt" width="164"
+        height="164">
+    </picture>
   </div>
   <div class="user-card__content">
     <h3 class="user-card__name">@@cardName</h3>

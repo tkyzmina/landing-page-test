@@ -47,7 +47,7 @@ const setModalListeners = (modal, closeCallback, preventScrollLock) => {
     closeModal(modal, closeCallback, preventScrollLock);
   });
 
-  document.addEventListener("keydown", (evt) => {
+  window.addEventListener("keydown", (evt) => {
     onEscPress(evt, modal, closeCallback, preventScrollLock);
   });
 };

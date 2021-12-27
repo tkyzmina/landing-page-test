@@ -1,4 +1,4 @@
-# Check it on GHPages
+# [Check it on GHPages](https://tkyzmina.github.io/landing-page-test/)
 
 ## [Гайд по работе со сборкой](/GUIDE.md) 📕
 
