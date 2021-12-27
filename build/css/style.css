@@ -1079,12 +1079,12 @@ button,
   margin: 0;
   margin-bottom: 32px;
   padding: 0;
-  color: #232323;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: 48px;
-  text-align: center; }
+  text-align: center;
+  color: #232323; }
   @media (max-width: 767px) {
     .section-title {
       font-size: 32px;
