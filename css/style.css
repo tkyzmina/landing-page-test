@@ -987,7 +987,7 @@ button,
     .btn--play:active svg {
       opacity: 0.5; }
   .btn__icon svg {
-    fill: #93EA20;
+    fill: #93ea20;
     opacity: 0.7;
     -webkit-transition: fill 0.3s ease, opacity 0.3s ease;
     transition: fill 0.3s ease, opacity 0.3s ease; }
@@ -1079,12 +1079,12 @@ button,
   margin: 0;
   margin-bottom: 32px;
   padding: 0;
-  color: #232323;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: 48px;
-  text-align: center; }
+  text-align: center;
+  color: #232323; }
   @media (max-width: 767px) {
     .section-title {
       font-size: 32px;
